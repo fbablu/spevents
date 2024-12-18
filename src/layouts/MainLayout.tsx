@@ -1,12 +1,13 @@
+// src/layouts/MainLayout.tsx
 import { Link, useNavigate } from "react-router-dom";
 import { Camera, Image as ImageIcon, QrCode } from "lucide-react";
 import { Scene } from "../components";
+import { DemoControls } from "../components/TimedEvents/DemoControls";
 
 export function MainLayout() {
   const navigate = useNavigate();
-
+  
   const handleCameraClick = () => {
-    // Navigate to QR code page with state indicating we came from venue
     navigate("/demo/qr", { state: { from: "venue" } });
   };
 
@@ -51,7 +52,11 @@ export function MainLayout() {
 
       <main className="h-screen">
         <Scene />
+
       </main>
+
+      {/* Demo Controls */}
+      <DemoControls />
 
       <div className="fixed bottom-6 left-1/2 -translate-x-1/2 text-white/70 text-sm bg-black/30 px-4 py-2 rounded-full backdrop-blur-sm">
         Hover over photos to see details • Drag to rotate • Scroll to zoom

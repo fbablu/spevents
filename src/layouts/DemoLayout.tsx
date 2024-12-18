@@ -17,9 +17,11 @@ export function DemoLayout() {
 
           <div className="px-4 py-2 bg-[#FFD700] text-[#8B0000] font-semibold rounded-full">
             DEMO MODE
+            
           </div>
         </div>
       </div>
+      
 
       {/* Render nested routes */}
       <Outlet />
