@@ -19,10 +19,10 @@ export default function CameraPage(): JSX.Element {
     if (!checkMobile()) navigate('/camera');
   }, [navigate]);
 
-  // Early return with JSX instead of navigation
+
   if (!isMobile) {
     navigate('/');
-    return <></>;  // Return empty fragment instead of navigation result
+    return <></>;
   }
 
   return (
