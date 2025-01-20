@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, LayoutGrid, Clapperboard } from "lucide-react";
 import GridCollage from "./GridCollage";
 import MockShaadiCollage from "./MockShaadiCollage";
-
+ 
 interface Photo {
   url: string;
   name: string;
