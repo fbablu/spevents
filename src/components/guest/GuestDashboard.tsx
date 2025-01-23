@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { Camera, Award, Grid, WandSparkles, Share2, X, Trash2, Check } from 'lucide-react';
+import { useNgrok } from '../../contexts/NgrokContext';
 import { motion, AnimatePresence } from 'framer-motion';
 import { shareToInstagram } from './utils/collage';
 
@@ -19,10 +20,20 @@ interface TabConfig {
 export function GuestDashboard() {
   const navigate = useNavigate();
   const { eventId } = useParams();
+  const { baseUrl } = useNgrok();
+
+  const navigateWithBaseUrl = (path: string) => {
+    const fullPath = path === "/" ? `/${eventId}/guest` : `/${eventId}/guest${path}`;
+    if (window.innerWidth <= 768 && baseUrl) {
+      window.location.href = `${baseUrl}${fullPath}`;
+    } else {
+      navigate(fullPath);
+    }
+  };
   const [photos, setPhotos] = useState<Photo[]>(() => {
     return JSON.parse(localStorage.getItem('uploaded-photos') || '[]');
   });
-  const [isLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const [activeTab, setActiveTab] = useState('gallery');
   const [selectedPhotoIndex, setSelectedPhotoIndex] = useState<number | null>(null);
   const [isDeleteMode, setIsDeleteMode] = useState(false);
@@ -38,18 +49,26 @@ export function GuestDashboard() {
   const handleTabClick = (tabId: string) => {
     setActiveTab(tabId);
     
+    const navigateToPath = (path: string) => {
+      const fullPath = path === "/" 
+        ? `/${eventId}/guest` 
+        : `/${eventId}/guest${path}`;
+        
+      navigate(fullPath);
+    };
+    
     switch (tabId) {
       case 'camera':
-        navigate(`/${eventId}/guest/camera`);
+        navigateToPath('/camera');
         break;
       case 'create':
-        navigate(`/${eventId}/guest/create`);
+        navigateToPath('/create');
         break;
       case 'prize':
-        navigate(`/${eventId}/guest/feedback`);
+        navigateToPath('/feedback');
         break;
       case 'gallery':
-        navigate(`/${eventId}/guest`);
+        navigateToPath('/');
         break;
     }
   };
@@ -170,7 +189,7 @@ export function GuestDashboard() {
               <div className="text-center py-12">
                 <p className="text-white/60">No photos yet</p>
                 <button
-                  onClick={() => navigate(`/${eventId}/guest/camera`)}
+                  onClick={() => navigateWithBaseUrl('/camera')}
                   className="mt-4 px-6 py-2 bg-white/10 text-white rounded-full hover:bg-white/20"
                 >
                   Take Photos
