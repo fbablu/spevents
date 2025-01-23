@@ -33,7 +33,7 @@ export function GuestDashboard() {
   const [photos, setPhotos] = useState<Photo[]>(() => {
     return JSON.parse(localStorage.getItem('uploaded-photos') || '[]');
   });
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading] = useState(false);
   const [activeTab, setActiveTab] = useState('gallery');
   const [selectedPhotoIndex, setSelectedPhotoIndex] = useState<number | null>(null);
   const [isDeleteMode, setIsDeleteMode] = useState(false);
