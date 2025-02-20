@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useThree } from "@react-three/fiber";
 import * as THREE from "three";
 import MockShaadiScene from "./MockShaadiScene";
-import AnimatedBorder from "../AnimatedBorder";
+import AnimatedBorder from "../../AnimatedBorder";
 
 interface ModelSlideshowProps {
   photos: {
