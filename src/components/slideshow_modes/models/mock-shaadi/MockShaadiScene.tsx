@@ -81,7 +81,11 @@ function FlowerPattern({
   );
 }
 
-export default function MockShaadiScene({ children }: { children: React.ReactNode }) {
+export default function MockShaadiScene({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <div className="w-full h-screen">
       <Canvas

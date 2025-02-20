@@ -4,8 +4,6 @@ import { useThree } from "@react-three/fiber";
 import * as THREE from "three";
 import PohelaFalgunScene from "./PohelaFalgunScene";
 
-
-
 interface ModelSlideshowProps {
   photos: {
     src: string;
@@ -15,23 +13,13 @@ interface ModelSlideshowProps {
   hideUI?: boolean;
 }
 
-
-const OpeningSequence = () => {
-  
-}
-
+const OpeningSequence = () => {};
 
 // This is the pohela falgun model (which uses the scene)
-const PohelaFalgunModelSlideshow: React.FC<ModelSlideshowProps> = ({ photos }) => {
-
-
-  return (
-    <div></div>
-  );
+const PohelaFalgunModelSlideshow: React.FC<ModelSlideshowProps> = ({
+  photos,
+}) => {
+  return <div></div>;
 };
-
-
-
-
 
 export default PohelaFalgunModelSlideshow;

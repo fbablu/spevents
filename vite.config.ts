@@ -5,8 +5,8 @@ import mkcert from "vite-plugin-mkcert";
 
 // https://vitejs.dev/config/
 export default defineConfig(({}) => {
-  const isHost = process.env.APP_TYPE === 'host';
-  
+  const isHost = process.env.APP_TYPE === "host";
+
   return {
     plugins: [react(), mkcert()],
     server: {
