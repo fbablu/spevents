@@ -16,6 +16,10 @@ interface ModelSlideshowProps {
 }
 
 
+const OpeningSequence = () => {
+  
+}
+
 
 // This is the pohela falgun model (which uses the scene)
 const PohelaFalgunModelSlideshow: React.FC<ModelSlideshowProps> = ({ photos }) => {
