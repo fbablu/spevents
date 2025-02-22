@@ -7,7 +7,7 @@ export default function SlideshowPage() {
       <PhotoSlideshow />
 
       {/* QR Code moved to top right */}
-      <div className="absolute top-5 right-5 z-50">
+      <div className="absolute top-5 right-16 z-50">
         <SlideshowQRCode />
       </div>
     </div>
