@@ -167,3 +167,11 @@ This means:
 - You must state any significant changes made
 - You must preserve original copyright and license notices
 - If you distribute or provide network access to modified versions, you must share your modifications under the same license
+
+
+
+- Snapchat filters
+- Snapshcart type mini videos
+- Guest2Guest sharing between friends 
+- AI Photo Albums 
+

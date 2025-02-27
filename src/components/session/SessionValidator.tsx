@@ -23,7 +23,7 @@ export function SessionValidator({ children }: SessionValidatorProps) {
       const debug = {
         eventId,
         envEventId,
-        eventIdType: typeof eventId,
+        // eventIdType: typeof eventId,
         envEventIdType: typeof envEventId,
         eventIdLength: eventId?.length,
         envEventIdLength: envEventId?.length,
