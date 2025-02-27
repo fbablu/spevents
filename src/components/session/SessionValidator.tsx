@@ -25,8 +25,8 @@ export function SessionValidator({ children }: SessionValidatorProps) {
         envEventId,
         // eventIdType: typeof eventId,
         envEventIdType: typeof envEventId,
-        eventIdLength: eventId?.length,
-        envEventIdLength: envEventId?.length,
+        // eventIdLength: eventId?.length,
+        // envEventIdLength: envEventId?.length,
         exact: eventId === envEventId,
       };
 
