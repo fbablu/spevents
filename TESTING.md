@@ -91,12 +91,3 @@ jest.mock('framer-motion', () => ({
 ## Continuous Integration
 
 Tests are automatically run during CI/CD pipelines. Make sure your tests pass before pushing code to the main branch.
-
-## Best Practices
-
-1. Test behavior, not implementation
-2. Keep tests simple and focused
-3. Use meaningful assertions
-4. Avoid unnecessary mocks
-5. Clean up after tests
-6. Use appropriate selectors (prefer user-centric ones like `getByRole` over `getByTestId`)
