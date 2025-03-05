@@ -1,0 +1,18 @@
+{
+  "extends": "./tsconfig.app.json",
+  "compilerOptions": {
+    "module": "es2022",
+    "moduleResolution": "node",
+    "target": "es2022",
+    "jsx": "react-jsx",
+    "types": ["jest", "node", "@testing-library/jest-dom"],
+    "esModuleInterop": true,
+    "allowJs": true
+  },
+  "include": [
+    "src/**/*.test.ts",
+    "src/**/*.test.tsx",
+    "src/setupTests.d.ts",
+    "__mocks__/**/*"
+  ]
+}
